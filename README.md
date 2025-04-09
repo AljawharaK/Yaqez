@@ -1,0 +1,2 @@
+# Yaqez
+AI League SCAI
