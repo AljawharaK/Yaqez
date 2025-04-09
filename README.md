@@ -1,7 +1,8 @@
 # Yaqez
 AI League SCAI
 
-Roboflow: https://universe.roboflow.com/ai-nwwvh/project-2-kbznf
+Roboflow Dataset: https://universe.roboflow.com/ai-nwwvh/project-2-kbznf
+
 مشروع يقظ: الابتكار في سلامة الملاعب عبر الذكاء الاصطناعي
 
 يُعد "مشروع يقظ" مبادرة مبتكرة تهدف إلى تعزيز تجربة المشجعين وضمان السلامة داخل الملاعب من خلال تقنيات الذكاء الاصطناعي، مما يساهم في خلق بيئة أكثر أمانًا لكل من الجماهير والعاملين.
