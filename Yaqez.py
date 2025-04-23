@@ -49,7 +49,7 @@ def my_sink(result, video_frame):
 pipeline = InferencePipeline.init_with_workflow(
     api_key="q4izGFwbfMIkW9Eyjjtc",
     workspace_name="ai-nwwvh",
-    workflow_id="custom-workflow-5",
+    workflow_id="custom-workflow-4",
     video_reference=0,  # الكاميرا الافتراضية
     max_fps=10,
     on_prediction=my_sink
