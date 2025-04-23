@@ -55,4 +55,4 @@ Roboflow Dataset: https://universe.roboflow.com/ai-nwwvh/project-2-kbznf
 
 (الاسترجاع) Recall
 
-![image alt](https://github.com/AljawharaK/Yaqez/blob/main/Logo_dark.PNG)
+![image alt](https://github.com/AljawharaK/Yaqez/blob/main/Logo.PNG)
