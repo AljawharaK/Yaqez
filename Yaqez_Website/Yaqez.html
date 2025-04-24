@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaqez.ai</title>
+    <!-------------------------------- font and css file -------------------------------------->
+    <link rel="stylesheet" href="Yaqez_Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+    <!-------------------------------- Header and Sidebar Container -------------------------------------->
+        <!-------------------------------- Header -------------------------------------->
+    <body class="light-theme">
+        <header class="header">
+            <div class="header-left">
+            </div>
+        
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#settings"><img src="imgs/Settings.png" class="icon" alt="Settings" height="20" width="20"></a></li>
+                    <li><a href="#notification"><img src="imgs/Notifications.png" class="icon" alt="Notifications" height="20" width="20"></a></li>
+                    <li><a href="#" id="mode-toggle"><i class="fas fa-moon icon"></i></a></li>
+                        <li><a href="#" id="language-toggle">English</a></li>
+                    </ul>
+                </nav>
+            </header>
+        
+
+        <!-------------------------------- Sidebar -------------------------------------->
+        <aside class="sidebar">
+            <a href="#"><img src="imgs/Logo_dark.png" class="logo" alt="Yaqez Logo" height="80" width="80" style="padding: 0 60px;"></a>
+            <ul>
+                <li><a href="#home"><img src="imgs/Icons.png" class="icon" alt="Home" height="20" width="20"><span class="menu-text">الصفحة الرئيسية</span></a></li>
+                <li><a href="#security"><img src="imgs/Icons.png" class="icon" alt="Security" height="20" width="20"><span class="menu-text">محلل البيانات</span></a></li>
+                <li><a href="#data"><img src="imgs/Icons.png" class="icon" alt="Data" height="20" width="20"><span class="menu-text">البث الحي</span></a></li>
+                <li><a href="#help"><img src="imgs/Icons.png" class="icon" alt="Help" height="20" width="20"><span class="menu-text">اكتشاف الوجه</span></a></li>
+            </ul>
+        </aside>
+
+    <!-------------------------------- Main Content -------------------------------------->
+    <main class="main-content">
+            <!-- for main page -->
+    </main>
+
+    <script>
+        // Language toggle functionality
+        document.getElementById('language-toggle').addEventListener('click', function(e) {
+            e.preventDefault();
+            const html = document.documentElement;
+            const isRTL = html.getAttribute('dir') === 'rtl';
+            const menuTexts = document.querySelectorAll('.menu-text');
+            
+            if (isRTL) {
+                // Switch to English (LTR)
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', 'en');
+                this.textContent = 'العربية';
+                
+                // Update menu texts
+                menuTexts[0].textContent = 'Home';
+                menuTexts[1].textContent = 'Data Analytic';
+                menuTexts[2].textContent = 'Live';
+                menuTexts[3].textContent = 'Face Detection';
+            } else {
+                // Switch to Arabic (RTL)
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'ar');
+                this.textContent = 'English';
+                
+                // Update menu texts
+                menuTexts[0].textContent = 'الصفحة الرئيسية';
+                menuTexts[1].textContent = 'محلل البيانات';
+                menuTexts[2].textContent = 'البث الحي';
+                menuTexts[3].textContent = 'اكتشاف الوجه';
+            }
+        });
+
+        // Dark/light mode toggle functionality
+        document.getElementById('mode-toggle').addEventListener('click', function(e) {
+            e.preventDefault();
+            const body = document.body;
+            const isLight = body.classList.contains('light-theme');
+            const icon = this.querySelector('i');
+            const logo = document.querySelector('.logo');
+            
+            if (isLight) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                logo.src = 'imgs/Logo_light.png'; 
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                logo.src = 'imgs/Logo_dark.png';
+            }
+        });
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const ctx = document.getElementById('alertChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['سلوك عنيف', 'حريق أو دخان', 'إغماء'],
+                datasets: [{
+                    data: [14, 3, 3],
+                    backgroundColor: ['#ffcc00', '#ff4444', '#3399ff']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
